@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({ user, i }) => {
                 { 'bg-[#424022]': i === 0 },
                 { 'bg-[#bfbfbf26]': i === 1 },
                 { 'bg-[#382e25]': i === 2 },
-                { 'bg-[#020202]': i > 2 }
+                { 'bg-[#121212]': i > 2 }
             )}
             key={user.id}
         >
