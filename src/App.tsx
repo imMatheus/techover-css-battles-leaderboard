@@ -16,7 +16,7 @@ function App() {
                 Techover CSS Battles Leaderboard
             </h1>
             <a
-                className='mb-4 block text-base font-bold text-yellow-400 underline'
+                className='mb-4 block w-max text-base font-bold text-yellow-400 underline'
                 href='https://cssbattle.dev/'
                 target='_blank'
             >
