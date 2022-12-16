@@ -13,6 +13,15 @@ function App() {
 
             {loading ? (
                 <div className='mx-auto w-6 h-6 border-4 rounded-full border-gray-600 border-t-indigo-700 animate-spin'></div>
+            ) : error || !users || users.length === 0 ? (
+                <>
+                    <h3 className='text-red-500 mt-20 mb-3 text-center text-3xl font-bold'>
+                        Seems like something went wrong
+                    </h3>
+                    <p className='text-red-50 text-sm text-center'>
+                        Please try again or notify the Techover devs about this
+                    </p>
+                </>
             ) : (
                 <div className='gap-4 grid md:grid-cols-2 lg:grid-cols-3'>
                     {users?.map((user, i) => {
