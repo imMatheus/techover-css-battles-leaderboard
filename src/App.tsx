@@ -12,11 +12,11 @@ function App() {
 
     return (
         <div className='mx-auto max-w-6xl'>
-            <h1 className='mb-8 text-center text-5xl font-bold text-gray-300'>
+            <h1 className='mb-8 text-center text-2xl font-bold text-gray-300 md:text-5xl'>
                 Techover CSS Battles Leaderboard
             </h1>
             <a
-                className='mb-4 block w-max text-base font-bold text-yellow-400 underline'
+                className='mb-4 block w-max text-xs font-bold text-yellow-400 underline md:text-base'
                 href='https://cssbattle.dev/'
                 target='_blank'
             >
@@ -37,10 +37,10 @@ function App() {
                 </>
             ) : (
                 <>
-                    <div className='mb-4 flex w-max flex-wrap gap-0.5 overflow-hidden rounded-lg bg-[#050505] text-white'>
+                    <div className='mb-4 flex flex-wrap gap-0.5 overflow-hidden bg-[#050505] text-white md:rounded-lg'>
                         <Link
                             className={classNames(
-                                'bg-[#030303] py-3 px-7 text-sm font-bold transition-colors',
+                                'block bg-[#030303] px-5 py-2 text-xs font-bold transition-colors md:py-3 md:px-7 md:text-sm',
                                 {
                                     'bg-yellow-600': pathname === `/`,
                                 }
@@ -54,7 +54,7 @@ function App() {
                                 <Link
                                     key={batch}
                                     className={classNames(
-                                        'bg-[#030303] py-3 px-7 text-sm font-bold transition-colors',
+                                        'block bg-[#030303] py-2 px-5 text-xs font-bold transition-colors md:py-3 md:px-7 md:text-sm',
                                         {
                                             'bg-yellow-600':
                                                 pathname === `/batch/${batch}`,
@@ -71,7 +71,7 @@ function App() {
                         <Route
                             path='*'
                             element={
-                                <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
+                                <div className='grid gap-4 sm:grid-cols-2 md:grid-cols-3'>
                                     {users.map((user, i) => (
                                         <Card user={user} i={i} />
                                     ))}
@@ -100,7 +100,7 @@ function App() {
                                             </p>
                                         </div>
                                     ) : (
-                                        <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
+                                        <div className='grid gap-4 sm:grid-cols-2 md:grid-cols-3'>
                                             {users
                                                 .filter(
                                                     (user) =>

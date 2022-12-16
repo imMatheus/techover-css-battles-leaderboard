@@ -13,7 +13,7 @@ const Card: React.FC<CardProps> = ({ user, i }) => {
             target='_blank'
             href={`https://cssbattle.dev/player/${user.id}`}
             className={classNames(
-                'flex cursor-pointer gap-2 rounded-lg p-4',
+                'flex cursor-pointer flex-col gap-2 rounded-lg p-4 sm:flex-row',
                 { 'bg-[#424022]': i === 0 },
                 { 'bg-[#bfbfbf26]': i === 1 },
                 { 'bg-[#382e25]': i === 2 },
@@ -21,23 +21,26 @@ const Card: React.FC<CardProps> = ({ user, i }) => {
             )}
             key={user.id}
         >
-            <div
-                className={classNames(
-                    'mr-1 mt-1 flex-shrink-0 text-xl font-black italic text-white',
-                    { 'text-[#ffd700]': i === 0 },
-                    { 'text-[#c0c0c0]': i === 1 },
-                    { 'text-[#cd7f33]': i === 2 }
-                )}
-            >
-                #{i + 1}
+            <div className='flex gap-2'>
+                <div
+                    className={classNames(
+                        'mr-1 mt-1 flex-shrink-0 text-xl font-black italic text-white',
+                        { 'text-[#ffd700]': i === 0 },
+                        { 'text-[#c0c0c0]': i === 1 },
+                        { 'text-[#cd7f33]': i === 2 }
+                    )}
+                >
+                    #{i + 1}
+                </div>
+                <div className='flex-shrink-0'>
+                    <img
+                        src={user.avatar}
+                        alt=''
+                        className='h-10 w-10 rounded-full md:h-12 md:w-12'
+                    />
+                </div>
             </div>
-            <div className='flex-shrink-0'>
-                <img
-                    src={user.avatar}
-                    alt=''
-                    className='h-10 w-10 rounded-full md:h-12 md:w-12'
-                />
-            </div>
+
             <div>
                 <h2 className='text-xl font-bold text-white'>
                     {user.displayName}
