@@ -15,6 +15,13 @@ function App() {
             <h1 className='mb-8 text-center text-5xl font-bold text-gray-300'>
                 Techover CSS Battles Leaderboard
             </h1>
+            <a
+                className='mb-4 block text-base font-bold text-yellow-400 underline'
+                href='https://cssbattle.dev/'
+                target='_blank'
+            >
+                Klättra på leaderboarden nu!
+            </a>
 
             {loading ? (
                 <div className='mx-auto h-6 w-6 animate-spin rounded-full border-4 border-gray-600 border-t-indigo-700'></div>
@@ -45,6 +52,7 @@ function App() {
                         {batches.map((batch) => {
                             return (
                                 <Link
+                                    key={batch}
                                     className={classNames(
                                         'bg-[#030303] py-3 px-7 text-sm font-bold transition-colors',
                                         {
