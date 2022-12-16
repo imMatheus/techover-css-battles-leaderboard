@@ -40,10 +40,10 @@ function App() {
                     <div className='mb-4 flex flex-wrap gap-0.5 overflow-hidden bg-[#050505] text-white md:rounded-lg'>
                         <Link
                             className={classNames(
-                                'block bg-[#030303] px-5 py-2 text-xs font-bold transition-colors md:py-3 md:px-7 md:text-sm',
-                                {
-                                    'bg-yellow-600': pathname === `/`,
-                                }
+                                'block  px-5 py-2 text-xs font-bold transition-colors md:py-3 md:px-7 md:text-sm',
+                                pathname === `/`
+                                    ? 'bg-yellow-600'
+                                    : 'bg-[#131313]'
                             )}
                             to={`/`}
                         >
@@ -54,11 +54,10 @@ function App() {
                                 <Link
                                     key={batch}
                                     className={classNames(
-                                        'block bg-[#030303] py-2 px-5 text-xs font-bold transition-colors md:py-3 md:px-7 md:text-sm',
-                                        {
-                                            'bg-yellow-600':
-                                                pathname === `/batch/${batch}`,
-                                        }
+                                        'block py-2 px-5 text-xs font-bold transition-colors md:py-3 md:px-7 md:text-sm',
+                                        pathname === `/batch/${batch}`
+                                            ? 'bg-yellow-600'
+                                            : 'bg-[#131313]'
                                     )}
                                     to={`/batch/${batch}`}
                                 >
