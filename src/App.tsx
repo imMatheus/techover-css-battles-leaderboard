@@ -19,10 +19,11 @@ function App() {
                         return (
                             <div
                                 className={classNames(
-                                    'p-4 flex gap-2 bg-black rounded-lg',
+                                    'p-4 flex gap-2 rounded-lg',
                                     { 'bg-[#424022]': i === 0 },
                                     { 'bg-[#bfbfbf26]': i === 1 },
-                                    { 'bg-[#382e25]': i === 2 }
+                                    { 'bg-[#382e25]': i === 2 },
+                                    { 'bg-[#020202]': i > 2 }
                                 )}
                                 key={user.id}
                             >
@@ -47,11 +48,11 @@ function App() {
                                     <h2 className='text-white font-bold text-xl'>
                                         {user.displayName}
                                     </h2>
-                                    <p className='text-gray-300 text-sm'>
+                                    <p className='text-gray-400 text-sm'>
                                         {user.score.toFixed(2)} -{' '}
                                         {`(${user.playedCount} targets)`}
                                     </p>
-                                    <p className='text-gray-300 text-xs'>
+                                    <p className='text-gray-400 text-xs'>
                                         {`Global rank: ${user.rank || '-'}/${
                                             user.totalPlayers
                                         }`}
