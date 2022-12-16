@@ -2,6 +2,9 @@ import { usersInfo } from './usersInfo'
 import type { UserWithScore } from './usersInfo'
 import { useState, useEffect } from 'react'
 
+// to get user info use the following url
+// https://cssbattle.dev/packages/nextjs/api/playerProfile?userId=
+
 export function useLeaderboard() {
     const [users, setUsers] = useState<UserWithScore[] | null>(null)
     const [loading, setLoading] = useState(true)
