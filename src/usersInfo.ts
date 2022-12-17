@@ -54,4 +54,11 @@ export const usersInfo: User[] = [
         displayName: 'Ulvesten',
         batch: 2,
     },
+    {
+        id: 'vqvFXBZrIHVoSeDhfjzKaTtSzFo2',
+        avatar: 'https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2FvqvFXBZrIHVoSeDhfjzKaTtSzFo2%2Favatar_vqvFXBZrIHVoSeDhfjzKaTtSzFo2.png?alt=media',
+        username: 'Heavenstone',
+        displayName: 'Jakob',
+        batch: 1,
+    },
 ]
