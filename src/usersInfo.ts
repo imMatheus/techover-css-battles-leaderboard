@@ -75,4 +75,11 @@ export const usersInfo: User[] = [
         displayName: 'Emil Mattsson',
         batch: 3,
     },
+    {
+        id: 'cDdAo3nrfgTKnCmNPbilqxUjDM22',
+        avatar: 'https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2FcDdAo3nrfgTKnCmNPbilqxUjDM22%2Favatar_cDdAo3nrfgTKnCmNPbilqxUjDM22.png?alt=media',
+        username: 'samuellindberg',
+        displayName: 'Samuel Lindberg',
+        batch: 4,
+    },
 ]
