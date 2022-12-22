@@ -82,4 +82,10 @@ export const usersInfo: User[] = [
         displayName: 'Samuel Lindberg',
         batch: 4,
     },
+    {
+        id: 'e3s891TPAsM99kmOlyhBB0snbDP2',
+        avatar: 'https://firebasestorage.googleapis.com/v0/b/cssbattleapp.appspot.com/o/user%2Fe3s891TPAsM99kmOlyhBB0snbDP2%2Favatar_e3s891TPAsM99kmOlyhBB0snbDP2.png?alt=media',
+        displayName: 'Haci',
+        batch: 4,
+    },
 ]
